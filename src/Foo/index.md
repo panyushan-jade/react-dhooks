@@ -1,12 +1,16 @@
 ---
 nav:
-  title: Components
-  path: /components
+  title: Hooks
+  path: /hooks
 ---
 
-## Foo
+## useDebounce
 
-Demo:
+用来处理防抖的 hook
+
+## 代码演示
+
+### 基础用法
 
 ```tsx
 import React from 'react';
