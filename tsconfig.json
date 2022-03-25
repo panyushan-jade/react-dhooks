@@ -4,10 +4,25 @@
     "module": "esnext",
     "moduleResolution": "node",
     "jsx": "react",
+    "baseUrl": ".",
     "esModuleInterop": true,
     // "types": ["jest"],
     "strict": true,
     "skipLibCheck": true,
-    "declaration": true
-  }
+    "declaration": true,
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*"],
+  "exclude": [
+    "node_modules",
+    "docs",
+    "dist",
+    "scripts",
+    "src/**/*.md",
+    "src/.umi/*",
+    "webpack",
+    "jest"
+  ]
 }
