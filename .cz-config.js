@@ -4,6 +4,7 @@ module.exports = {
     { value: 'fix', name: '🐛 fix: 修复一个Bug' },
     { value: 'docs', name: '📚 docs: 变更的只有文档' },
     { value: 'style', name: '💎 style: 代码风格,格式修复' },
+    { value: 'config', name: '㊙️ config: 配置文件的变动' },
     { value: 'refactor', name: '📦 refactor: 代码重构，注意和feat、fix区分开' },
     { value: 'perf', name: '🚀 perf: 代码优化,改善性能' },
     { value: 'test', name: '🚨 test: 测试' },
