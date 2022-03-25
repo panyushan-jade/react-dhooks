@@ -10,4 +10,7 @@ module.exports = {
     ecmaVersion: 7,
     sourceType: 'module',
   },
+  globals: {
+    module: true,
+  },
 };
