@@ -1,1 +1,1 @@
-export { default as Foo } from './Foo';
+export { default as useBlobToBase64 } from './useBlobToBase64';
