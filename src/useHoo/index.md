@@ -1,5 +1,5 @@
 ---
-title: useBlobToBase64
+title: 自定义页面名称
 nav:
   path: /file
   title: Hooks
@@ -8,7 +8,14 @@ group:
   title: File
 ---
 
-## useBlobToBase64
+<!-- ---
+nav:
+  title: Hooks33
+group:
+  title: 父级显示文本
+--- -->
+
+## useBlobToBase64333
 
 用来将 Blob 或 File 对象转换成 base64 格式
 

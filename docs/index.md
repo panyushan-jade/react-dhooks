@@ -4,7 +4,7 @@ hero:
   desc: 一套自定义可靠的 React Hooks 库
   actions:
     - text: Hooks列表
-      link: /hooks
+      link: /file
 # features:
 #   - icon: https://gw.alipayobjects.com/zos/bmw-prod/881dc458-f20b-407b-947a-95104b5ec82b/k79dm8ih_w144_h144.png
 #     title: Feature 1
