@@ -5,7 +5,7 @@ nav:
 
 ## useLocalStorage
 
-用来将图片的 url 转换成 base64 格式
+本地存储(是否过期,是否加密,是否前缀)
 
 ## 代码演示
 
