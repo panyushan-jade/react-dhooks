@@ -36,7 +36,7 @@ export default () => {
     const base64 = imgUrl.includes('base64') ? imgUrl : await useUrlToBase64(imgUrl);
     setImgUrl(base64);
   };
-  const onReset = async () => {
+  const onReset = () => {
     setImgUrl(baiduImg);
   };
   const base64_exhibition = {
@@ -131,7 +131,7 @@ export default () => {
     setHighQuality(highQuality);
     setLowQuality(lowQuality);
   };
-  const onReset = async () => {
+  const onReset = () => {
     setHighQuality(null);
     setLowQuality(null);
   };
