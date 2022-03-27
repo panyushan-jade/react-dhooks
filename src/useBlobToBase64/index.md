@@ -53,9 +53,9 @@ const toBase64 = useBlobToBase64(file);
 
 ## Params
 
-| 参数                | 说明         | 类型              | 默认值 |
-| ------------------- | ------------ | ----------------- | ------ |
-| file<code>\*</code> | 一个文件对象 | <code>file</code> | --     |
+| 参数 | 说明 | 类型 | 默认值 |
+| --- | --- | --- | --- |
+| file<code>\*</code> | 一个文件对象或 Blob<code>（file 继承 Blob）</code> | <code>file</code> | -- |
 
 ## Result
 
