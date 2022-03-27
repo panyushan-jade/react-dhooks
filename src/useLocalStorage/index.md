@@ -3,14 +3,7 @@ nav:
   path: /hooks
 ---
 
-<!-- ---
-nav:
-  title: Hooks33
-group:
-  title: 父级显示文本
---- -->
-
-## useUrlToBase64
+## useLocalStorage
 
 用来将图片的 url 转换成 base64 格式
 

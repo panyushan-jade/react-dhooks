@@ -9,10 +9,23 @@ export default defineConfig({
   mode: 'site',
   // more config: https://d.umijs.org/config
   navs: [
-    null, // null 值代表保留约定式生成的导航，只做增量配置
+    // null, // null 值代表保留约定式生成的导航，只做增量配置
+    { title: 'Hooks', path: '/hooks' },
     {
       title: 'GitHub',
       path: 'https://github.com/panyushan-jade/dHooks',
     },
   ],
+  menus: {
+    '/hooks': [
+      {
+        title: 'File',
+        children: ['useUrlToBase64', 'useBlobToBase64'],
+      },
+      {
+        title: 'Local',
+        children: ['useLocalStorage'],
+      },
+    ],
+  },
 });

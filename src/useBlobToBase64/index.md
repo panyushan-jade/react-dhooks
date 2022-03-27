@@ -1,11 +1,6 @@
 ---
-title: useBlobToBase64
 nav:
-  path: /file
-  title: Hooks
-group:
-  path: /file
-  title: File
+  path: /hooks
 ---
 
 ## useBlobToBase64
