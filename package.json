@@ -27,7 +27,7 @@
   },
   "lint-staged": {
     "**/src/*.{js,jsx,ts,tsx}": [
-      "eslint --cache --fix"
+      "eslint --cache --fix --ext .ts,.tsx"
     ],
     "*.{js,jsx,less,md,json}": [
       "prettier --write"
@@ -49,6 +49,8 @@
     "@testing-library/jest-dom": "^5.15.1",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.16.0",
+    "@typescript-eslint/parser": "^5.16.0",
     "@umijs/fabric": "^2.8.1",
     "@umijs/test": "^3.0.5",
     "commitizen": "^4.2.4",
