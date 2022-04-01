@@ -5,41 +5,54 @@ nav:
 
 ## useLocalStorage
 
-本地存储(是否过期,是否加密,是否前缀)
+用于 localStorage 的存储、获取、删除
 
 ## 代码演示
 
-### 基础用法
-
-第一个参数是图片的<code>url</code>
+### setLocalStorage
 
 ```tsx
 import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dHooks';
-import baiduImg from '/public/images/baidu.png';
+import { useLocalStorage } from 'dHooks';
 
 export default () => {
-  const [imgUrl, setImgUrl] = useState(baiduImg);
+  const [forms, setForms] = useState({
+    key: null,
+    value: null,
+    expires: null,
+    prefix: null,
+  });
   const onClick = async () => {
-    const base64 = imgUrl.includes('base64') ? imgUrl : await useUrlToBase64(imgUrl);
-    setImgUrl(base64);
+    // const base64 = imgUrl.includes('base64') ? imgUrl : await useUrlToBase64(imgUrl);
+    // setImgUrl(base64);
   };
   const onReset = () => {
-    setImgUrl(baiduImg);
+    // setImgUrl();
   };
   const base64_exhibition = {
     overflow: 'hidden',
     textOverflow: 'ellipsis',
     width: '50%',
   };
+  const onSaveHandle = () => {};
   return (
     <>
-      <div style={{ width: '300px', textAlign: 'center' }}>
-        <img width={300} src={imgUrl} />
-        <button onClick={onClick}>转换</button>
-        <button onClick={onReset}>重置</button>
+      <div style={{ display: 'flex' }}>
+        <span>
+          key：<input></input>
+        </span>
+        <span style={{ margin: '0 10px' }}>
+          value：<input></input>
+        </span>
+        <span style={{ margin: '0 10px' }}>
+          expires：<input></input>
+        </span>
+        <span>
+          prefix：<input></input>
+        </span>
+        <button onClick={onSaveHandle}>保存</button>
       </div>
-      <p style={base64_exhibition}>{imgUrl}</p>
+      <p style={base64_exhibition}></p>
     </>
   );
 };
