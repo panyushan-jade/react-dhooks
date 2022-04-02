@@ -1,17 +1,18 @@
-import { useState } from 'react';
-
 interface localStorage {
   key: string;
   value: any;
   expires?: Number;
   prefix?: string | number;
+  [item: string]: any;
 }
-interface stateType {
-  getLocalStorage: Function;
-  setLocalStorage: Function;
-  deleteLocalStorage: Function;
-  clearLocalStorage: Function;
-}
+
+const isEmpty = (obj: any) => {
+  if (typeof obj === 'undefined' || obj === null || obj === '') {
+    return true;
+  } else {
+    return false;
+  }
+};
 
 export default () => {
   const getLocalStorage = (key: string | number) => {
@@ -34,10 +35,15 @@ export default () => {
     }
   };
   const setLocalStorage = (params: localStorage) => {
-    const { key, prefix = '_', expires } = params;
-    const cusKey = JSON.stringify(prefix + key);
-    const cusValue = JSON.stringify(expires ? { ...params, nowDate: Date.now() } : params);
-    window.localStorage.setItem(cusKey, cusValue);
+    const { key, prefix, expires } = params;
+    const cusKey = prefix ? JSON.stringify(prefix + key) : JSON.stringify('__' + key);
+    let cusValue = expires ? { ...params, nowDate: Date.now() } : params;
+    Object.keys(cusValue).forEach((item) => {
+      if (isEmpty(cusValue[item])) {
+        delete cusValue[item];
+      }
+    });
+    window.localStorage.setItem(cusKey, JSON.stringify(cusValue));
   };
   const deleteLocalStorage = (key: string) => {
     window.localStorage.removeItem(key);
@@ -45,12 +51,11 @@ export default () => {
   const clearLocalStorage = () => {
     window.localStorage.clear();
   };
-  // eslint-disable-next-line no-unused-vars
-  const [storage, setStorage] = useState<stateType>({
+  const storage = {
     getLocalStorage,
     setLocalStorage,
     deleteLocalStorage,
     clearLocalStorage,
-  });
+  };
   return storage;
 };

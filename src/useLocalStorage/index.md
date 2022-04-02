@@ -34,21 +34,32 @@ export default () => {
     textOverflow: 'ellipsis',
     width: '50%',
   };
-  const onSaveHandle = () => {};
+  const onSaveHandle = () => {
+    const { setLocalStorage } = useLocalStorage();
+    if (forms.key && forms.value) {
+      setLocalStorage(forms);
+    }
+  };
+  const onChangeHandle = (type, e) => {
+    setForms({
+      ...forms,
+      [type]: e.target.value,
+    });
+  };
   return (
     <>
       <div style={{ display: 'flex' }}>
         <span>
-          key：<input></input>
+          key：<input onChange={onChangeHandle.bind(this, 'key')}></input>
         </span>
         <span style={{ margin: '0 10px' }}>
-          value：<input></input>
+          value：<input onChange={onChangeHandle.bind(this, 'value')}></input>
         </span>
         <span style={{ margin: '0 10px' }}>
-          expires：<input></input>
+          expires：<input onChange={onChangeHandle.bind(this, 'expires')}></input>
         </span>
         <span>
-          prefix：<input></input>
+          prefix：<input onChange={onChangeHandle.bind(this, 'prefix')}></input>
         </span>
         <button onClick={onSaveHandle}>保存</button>
       </div>
