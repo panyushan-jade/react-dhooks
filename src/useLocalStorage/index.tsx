@@ -36,14 +36,18 @@ export default () => {
   };
   const setLocalStorage = (params: localStorage) => {
     const { key, prefix, expires } = params;
-    const cusKey = prefix ? JSON.stringify(prefix + key) : JSON.stringify('__' + key);
+    const cusKey = prefix ? prefix + key : '__' + key;
     let cusValue = expires ? { ...params, nowDate: Date.now() } : params;
+    if (window.localStorage.getItem(cusKey)) {
+      return [cusKey, JSON.parse(window.localStorage.getItem(cusKey) || '{}')];
+    }
     Object.keys(cusValue).forEach((item) => {
       if (isEmpty(cusValue[item])) {
         delete cusValue[item];
       }
     });
     window.localStorage.setItem(cusKey, JSON.stringify(cusValue));
+    return [cusKey, JSON.parse(JSON.stringify(cusValue))];
   };
   const deleteLocalStorage = (key: string) => {
     window.localStorage.removeItem(key);

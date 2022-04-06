@@ -12,7 +12,7 @@ nav:
 ### setLocalStorage
 
 ```tsx
-import React, { useState } from 'react';
+import React, { useState, useCallback } from 'react';
 import { useLocalStorage } from 'dHooks';
 
 export default () => {
@@ -22,10 +22,9 @@ export default () => {
     expires: null,
     prefix: null,
   });
-  const onClick = async () => {
-    // const base64 = imgUrl.includes('base64') ? imgUrl : await useUrlToBase64(imgUrl);
-    // setImgUrl(base64);
-  };
+  const [localValue, setLocalValue] = useState(null);
+  const { setLocalStorage, getLocalStorage } = useLocalStorage();
+  const onClick = async () => {};
   const onReset = () => {
     // setImgUrl();
   };
@@ -35,9 +34,9 @@ export default () => {
     width: '50%',
   };
   const onSaveHandle = () => {
-    const { setLocalStorage } = useLocalStorage();
     if (forms.key && forms.value) {
-      setLocalStorage(forms);
+      const [key, value] = setLocalStorage(forms);
+      setLocalValue(JSON.stringify(value));
     }
   };
   const onChangeHandle = (type, e) => {
@@ -46,6 +45,7 @@ export default () => {
       [type]: e.target.value,
     });
   };
+
   return (
     <>
       <div style={{ display: 'flex' }}>
@@ -63,7 +63,11 @@ export default () => {
         </span>
         <button onClick={onSaveHandle}>保存</button>
       </div>
-      <p style={base64_exhibition}></p>
+      <p style={base64_exhibition}>
+        <span>key:{forms.key}</span>
+        <br />
+        <span>value:{localValue}</span>
+      </p>
     </>
   );
 };
