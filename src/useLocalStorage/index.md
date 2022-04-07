@@ -46,6 +46,9 @@ export default () => {
     });
   };
 
+  const onGetHandle = () => {
+    console.log('22222', getLocalStorage('__1111'));
+  };
   return (
     <>
       <div style={{ display: 'flex' }}>
@@ -62,6 +65,7 @@ export default () => {
           prefix：<input onChange={onChangeHandle.bind(this, 'prefix')}></input>
         </span>
         <button onClick={onSaveHandle}>保存</button>
+        <button onClick={onGetHandle}>获取</button>
       </div>
       <p style={base64_exhibition}>
         <span>key:{forms.key}</span>
@@ -73,56 +77,14 @@ export default () => {
 };
 ```
 
-<code>注意：这里示例用的是本地图片，如果用的是网络图片请确保服务器端支持 CORS</code>
+### getLocalStorage
 
-### 传递类型
+```tsx | pure
+import { useLocalStorage } from 'dHooks';
 
-第一个参数与上面一致，第二个参数为图片类型<code>type</code>
-
-```tsx
-import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dHooks';
-import baiduImg from '/public/images/baidu.png';
-
-//此处演示的图片默认类型为image/png
-export default () => {
-  const [imgUrl, setImgUrl] = useState(baiduImg);
-  const [webp, setWebp] = useState(null);
-  const [jpeg, setJpeg] = useState(null);
-  const onClick = async () => {
-    const webpBase64 = webp?.includes('base64') ? webp : await useUrlToBase64(imgUrl, 'image/webp');
-    const jpegBase64 = jpeg?.includes('base64') ? jpeg : await useUrlToBase64(imgUrl, 'image/jpeg');
-    setWebp(webpBase64);
-    setJpeg(jpegBase64);
-  };
-  const onReset = () => {
-    setWebp(null);
-    setJpeg(null);
-  };
-  return (
-    <>
-      <div style={{ width: '300px', textAlign: 'center' }}>
-        <div>
-          image/png（原图）：
-          <img width={300} src={imgUrl} />
-        </div>
-        <button onClick={onClick}>转换</button>
-        <button onClick={onReset}>重置</button>
-        <div>
-          image/webp：
-          <img width={300} src={webp} />
-        </div>
-        <div>
-          image/jpeg：
-          <img width={300} src={jpeg} />
-        </div>
-      </div>
-    </>
-  );
-};
+const { getLocalStorage } = useLocalStorage();
+getLocalStorage('Your key');
 ```
-
-<code>注意：因为是使用 canvas 进行的转换，当图片原始类型和要转换的类型不一致时，则透明区域会被填充黑色背景色。可以传递 bgColor 参数，默认值为白色</code>
 
 ### 图片质量
 

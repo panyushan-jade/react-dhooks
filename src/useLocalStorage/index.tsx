@@ -1,9 +1,9 @@
 interface localStorage {
   key: string;
-  value: any;
-  expires?: Number;
+  value: string;
+  expires?: string;
   prefix?: string | number;
-  [item: string]: any;
+  [key: string]: any;
 }
 
 const isEmpty = (obj: any) => {
@@ -16,19 +16,22 @@ const isEmpty = (obj: any) => {
 
 export default () => {
   const getLocalStorage = (key: string | number) => {
-    const value = window.localStorage.getItem(JSON.stringify(key));
+    const value = JSON.parse(window.localStorage.getItem(key as string) as string);
+    console.log('value', value);
+
     if (value) {
-      const expires = JSON.parse(value).expires;
-      const time = JSON.parse(value).nowDate;
-      if (expires) {
+      const expires = value.expires;
+      const time = value.nowDate;
+      if (expires && Number.isFinite(Number(expires))) {
+        console.log('eeeeeeeee', expires);
         if (Date.now() - time > expires) {
-          storage.deleteLocalStorage(JSON.stringify(key));
+          storage.deleteLocalStorage(key);
           return null;
         } else {
-          return JSON.parse(value);
+          return value;
         }
       } else {
-        return JSON.parse(value);
+        return value;
       }
     } else {
       return null;
@@ -37,7 +40,13 @@ export default () => {
   const setLocalStorage = (params: localStorage) => {
     const { key, prefix, expires } = params;
     const cusKey = prefix ? prefix + key : '__' + key;
-    let cusValue = expires ? { ...params, nowDate: Date.now() } : params;
+    let cusValue = params;
+    if (expires && Number.isFinite(Number(expires))) {
+      cusValue = { ...params, nowDate: Date.now() };
+    } else {
+      cusValue = { ...params, expires: undefined };
+    }
+    cusValue.prefix = prefix ? prefix : '__';
     if (window.localStorage.getItem(cusKey)) {
       return [cusKey, JSON.parse(window.localStorage.getItem(cusKey) || '{}')];
     }
@@ -49,8 +58,8 @@ export default () => {
     window.localStorage.setItem(cusKey, JSON.stringify(cusValue));
     return [cusKey, JSON.parse(JSON.stringify(cusValue))];
   };
-  const deleteLocalStorage = (key: string) => {
-    window.localStorage.removeItem(key);
+  const deleteLocalStorage = (key: string | number) => {
+    window.localStorage.removeItem(key as string);
   };
   const clearLocalStorage = () => {
     window.localStorage.clear();
