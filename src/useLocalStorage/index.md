@@ -93,7 +93,7 @@ getLocalStorage('Your key');
 ```tsx
 import React, { useState } from 'react';
 import { useUrlToBase64 } from 'dhooks';
-import baiduImg from '/public/images/baidu.png';
+import baiduImg from '../../public/images/baidu.png';
 
 export default () => {
   const [imgUrl, setImgUrl] = useState(baiduImg);

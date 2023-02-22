@@ -16,6 +16,9 @@ export default defineConfig({
       path: 'https://github.com/panyushan-jade/dHooks',
     },
   ],
+  alias: {
+    dhooks: process.cwd() + '/src/index.ts',
+  },
   menus: {
     '/hooks': [
       {
@@ -40,4 +43,9 @@ export default defineConfig({
       },
     ],
   },
+  nodeModulesTransform: {
+    type: 'none',
+    exclude: [],
+  },
+  dynamicImport: {},
 });
