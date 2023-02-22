@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "dHooks",
+  "name": "dhooks",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",
@@ -37,6 +37,7 @@
     ]
   },
   "dependencies": {
+    "antd": "^5.2.2",
     "babel-eslint": "^10.1.0",
     "eslint": "^8.11.0",
     "eslint-plugin-prettier": "^4.0.0",

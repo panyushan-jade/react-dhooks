@@ -1,4 +1,4 @@
-# dHooks
+# dhooks
 
 ## Getting Started
 

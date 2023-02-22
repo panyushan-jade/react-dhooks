@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: 'dHooks',
+  title: 'dhooks',
   favicon:
     'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
   logo: 'https://user-images.githubusercontent.com/9554297/83762004-a0761b00-a6a9-11ea-83b4-9c8ff721d4b8.png',
@@ -19,8 +19,20 @@ export default defineConfig({
   menus: {
     '/hooks': [
       {
+        title: 'LifeCycle',
+        children: ['useMount', 'useUnmount'],
+      },
+      {
+        title: 'State',
+        children: ['useBoolean', 'useToggle'],
+      },
+      {
+        title: 'Advanced',
+        children: ['useLatest'],
+      },
+      {
         title: 'File',
-        children: ['useUrlToBase64', 'useBlobToBase64'],
+        children: ['useUrlToBase64'],
       },
       {
         title: 'Local',

@@ -11,10 +11,11 @@
     "skipLibCheck": true,
     "declaration": true,
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "ahooks": ["./src/index.ts"]
     }
   },
-  "include": ["src/**/*"],
+  // "include": ["src/**/*"],
   "exclude": [
     "node_modules",
     "docs",
