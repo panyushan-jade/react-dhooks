@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/panyushan-jade/dHooks/compare/v1.0.0...v1.0.1) (2023-03-02)
+
+
+### Bug Fixes
+
+* 站点部署 修改umirc的配置 ([748af87](https://github.com/panyushan-jade/dHooks/commit/748af877f4a13430e35f095e8336c6b42664db2f))
+
 # 1.0.0 (2023-03-02)
 
 
