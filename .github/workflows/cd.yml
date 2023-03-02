@@ -1,4 +1,4 @@
-name: react-dhooks CD
+name: react-dhooks publish npm
 
 on:
   push:
@@ -19,5 +19,5 @@ jobs:
       - run: yarn install && yarn build
       - run: npx semantic-release
         env:
-          GH_TOKEN: ${{ secrets.GH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN_HOOKS }}
+          NPM_TOKEN: ${{ secrets.NPM_TOKEN_HOOKS }}
