@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "dhooks",
+  "name": "react-dhooks",
   "version": "1.0.0",
   "scripts": {
     "start": "dumi dev",

@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useBoolean } from 'dhooks';
+import { useBoolean } from 'react-dhooks';
 
 export default () => {
   const [state, { toggle, setTrue, setFalse }] = useBoolean(true);

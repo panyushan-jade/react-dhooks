@@ -4,7 +4,7 @@
  *
  */
 
-import { useMount } from 'dhooks';
+import { useMount } from 'react-dhooks';
 import React, { useState } from 'react';
 import { message } from 'antd';
 

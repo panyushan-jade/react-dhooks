@@ -1,3 +1,3 @@
 declare module '*.css';
 declare module '*.less';
-declare module 'dhooks';
+declare module 'react-dhooks';

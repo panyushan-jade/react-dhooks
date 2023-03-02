@@ -1,6 +1,6 @@
 ---
 hero:
-  title: dhooks
+  title: react-dhooks
   desc: 一套自定义可靠的 React Hooks 库
   actions:
     - text: Hooks列表
@@ -18,4 +18,4 @@ hero:
 footer: Open-source MIT Licensed | Copyright © 2020<br />Powered by [dumi](https://d.umijs.org)
 ---
 
-## Hello dhooks!
+## Hello react-dhooks!

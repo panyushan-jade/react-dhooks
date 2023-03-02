@@ -22,7 +22,7 @@ group:
 
 ```tsx
 import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 import baiduImg from '../../public/images/baidu.png';
 
 export default () => {
@@ -60,7 +60,7 @@ export default () => {
 
 ```tsx
 import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 import baiduImg from '../../public/images/baidu.png';
 
 //此处演示的图片默认类型为image/png
@@ -109,7 +109,7 @@ export default () => {
 
 ```tsx
 import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 import baiduImg from '../../public/images/baidu.png';
 
 export default () => {
@@ -156,7 +156,7 @@ export default () => {
 ## API
 
 ```tsx | pure
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 
 const toBase64 = useUrlToBase64(url);
 ```

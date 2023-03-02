@@ -13,7 +13,7 @@ nav:
 
 ```tsx
 import React, { useRef, useState } from 'react';
-import { useBlobToBase64 } from 'dhooks';
+import { useBlobToBase64 } from 'react-dhooks';
 import styles from './index.less';
 
 export default () => {
@@ -41,7 +41,7 @@ export default () => {
 ## API
 
 ```tsx | pure
-import { useBlobToBase64 } from 'dhooks';
+import { useBlobToBase64 } from 'react-dhooks';
 
 const toBase64 = useBlobToBase64(file);
 ```

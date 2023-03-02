@@ -4,7 +4,7 @@
  */
 
 import React, { useState, useEffect } from 'react';
-import { useLatest } from 'dhooks';
+import { useLatest } from 'react-dhooks';
 
 export default () => {
   const [count, setCount] = useState(0);

@@ -6,7 +6,7 @@
  * desc.zh-CN: 在组件卸载时，执行函数。
  */
 
-import { useUnmount } from 'dhooks';
+import { useUnmount } from 'react-dhooks';
 import { message } from 'antd';
 import React, { useState } from 'react';
 

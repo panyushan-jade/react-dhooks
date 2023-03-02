@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { useToggle } from 'dhooks';
+import { useToggle } from 'react-dhooks';
 
 export default () => {
   const [state, { toggle, set, setLeft, setRight }] = useToggle('Hello', 'World');

@@ -13,7 +13,7 @@ nav:
 
 ```tsx
 import React, { useState, useCallback } from 'react';
-import { useLocalStorage } from 'dhooks';
+import { useLocalStorage } from 'react-dhooks';
 
 export default () => {
   const [forms, setForms] = useState({
@@ -80,7 +80,7 @@ export default () => {
 ### getLocalStorage
 
 ```tsx | pure
-import { useLocalStorage } from 'dhooks';
+import { useLocalStorage } from 'react-dhooks';
 
 const { getLocalStorage } = useLocalStorage();
 getLocalStorage('Your key');
@@ -92,7 +92,7 @@ getLocalStorage('Your key');
 
 ```tsx
 import React, { useState } from 'react';
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 import baiduImg from '../../public/images/baidu.png';
 
 export default () => {
@@ -139,7 +139,7 @@ export default () => {
 ## API
 
 ```tsx | pure
-import { useUrlToBase64 } from 'dhooks';
+import { useUrlToBase64 } from 'react-dhooks';
 
 const toBase64 = useUrlToBase64(url);
 ```
