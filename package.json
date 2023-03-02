@@ -1,7 +1,27 @@
 {
-  "private": true,
+  "private": false,
   "name": "react-dhooks",
   "version": "1.0.0",
+  "description": "react hooks",
+  "author": "Jade",
+  "license": "MIT",
+  "keywords": [
+    "hooks",
+    "react",
+    "react-hooks",
+    "dumi",
+    "react hooks",
+    "hooks-library",
+    "typescript"
+  ],
+  "files": [
+    "es"
+  ],
+  "homepage": "https://github.com/panyushan-jade/dHooks",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/panyushan-jade/dHooks"
+  },
   "scripts": {
     "start": "dumi dev",
     "docs:build": "dumi build",
@@ -63,6 +83,9 @@
     "lint-staged": "^10.0.7",
     "prettier": "^2.2.1",
     "typescript": "^4.6.3",
-    "yorkie": "^2.0.0"
+    "yorkie": "^2.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/git": "^10.0.1",
+    "semantic-release": "^19.0.5"
   }
 }
