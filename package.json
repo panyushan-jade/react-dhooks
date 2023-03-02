@@ -31,8 +31,7 @@
     "prettier": "prettier --write \"**/*.{js,jsx,tsx,ts,less,md,json}\"",
     "test": "umi-test",
     "test:coverage": "umi-test --coverage",
-    "prepublishOnly": "npm run build",
-    "preinstall": "npx npm-limit yarn"
+    "prepublishOnly": "npm run build"
   },
   "module": "es/index.js",
   "typings": "es/index.d.ts",
