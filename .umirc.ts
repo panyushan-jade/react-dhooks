@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/dHooks',
   title: 'react-dhooks',
   publicPath: '/dHooks/',
-  favicon:'/icon.svg',
+  favicon:'/logo.svg',
   logo: '/icon.svg',
   outputPath: 'docs-dist',
   mode: 'site',
