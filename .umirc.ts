@@ -4,8 +4,8 @@ export default defineConfig({
   base: '/react-dhooks',
   title: 'react-dhooks',
   publicPath: '/react-dhooks/',
-  favicon:'/logo.svg',
-  logo: '/icon.svg',
+  favicon:'/react-dhooks/logo.svg',
+  logo: '/react-dhooks/icon.svg',
   outputPath: 'docs-dist',
   mode: 'site',
   // more config: https://d.umijs.org/config
