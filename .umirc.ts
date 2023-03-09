@@ -1,9 +1,9 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  base: '/dHooks',
+  base: '/react-dhooks',
   title: 'react-dhooks',
-  publicPath: '/dHooks/',
+  publicPath: '/react-dhooks/',
   favicon:'/logo.svg',
   logo: '/icon.svg',
   outputPath: 'docs-dist',
@@ -14,7 +14,7 @@ export default defineConfig({
     { title: 'Hooks', path: '/hooks' },
     {
       title: 'GitHub',
-      path: 'https://github.com/panyushan-jade/dHooks',
+      path: 'https://github.com/panyushan-jade/react-dhooks',
     },
   ],
   alias: {
