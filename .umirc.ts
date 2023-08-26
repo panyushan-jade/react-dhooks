@@ -4,7 +4,7 @@ export default defineConfig({
   base: '/react-dhooks',
   title: 'react-dhooks',
   publicPath: '/react-dhooks/',
-  favicon:'/react-dhooks/logo.svg',
+  favicon: '/react-dhooks/logo.svg',
   logo: '/react-dhooks/icon.svg',
   outputPath: 'docs-dist',
   mode: 'site',
@@ -28,7 +28,7 @@ export default defineConfig({
       },
       {
         title: 'State',
-        children: ['useBoolean', 'useToggle'],
+        children: ['useSetState', 'useBoolean', 'useToggle'],
       },
       {
         title: 'Advanced',
@@ -36,7 +36,7 @@ export default defineConfig({
       },
       {
         title: 'File',
-        children: ['useUrlToBase64'],
+        children: ['useUrlToBase64', 'useBlobToBase64'],
       },
       {
         title: 'Local',

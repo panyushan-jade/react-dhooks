@@ -12,7 +12,7 @@
     "declaration": true,
     "paths": {
       "@/*": ["./src/*"],
-      "ahooks": ["./src/index.ts"]
+      "react-dhooks": ["./src/index.ts"]
     }
   },
   // "include": ["src/**/*"],

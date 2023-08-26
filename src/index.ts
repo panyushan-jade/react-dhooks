@@ -6,3 +6,4 @@ export { default as useUnmount } from './useUnmount';
 export { default as useLatest } from './useLatest';
 export { default as useToggle } from './useToggle';
 export { default as useBoolean } from './useBoolean';
+export { default as useSetState } from './useSetState';
