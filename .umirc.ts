@@ -31,6 +31,10 @@ export default defineConfig({
         children: ['useSetState', 'useBoolean', 'useToggle'],
       },
       {
+        title: 'Effect',
+        children: ['useUpdateEffect', 'useUpdate'],
+      },
+      {
         title: 'Advanced',
         children: ['useLatest'],
       },

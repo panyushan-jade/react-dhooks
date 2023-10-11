@@ -7,3 +7,5 @@ export { default as useLatest } from './useLatest';
 export { default as useToggle } from './useToggle';
 export { default as useBoolean } from './useBoolean';
 export { default as useSetState } from './useSetState';
+export { default as useUpdateEffect } from './useUpdateEffect';
+export { default as useUpdate } from './useUpdate';
