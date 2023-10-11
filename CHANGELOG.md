@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/panyushan-jade/dHooks/compare/v1.1.0...v1.2.0) (2023-10-11)
+
+
+### Features
+
+* useUpdateEffect、useUpdate ([b73e127](https://github.com/panyushan-jade/dHooks/commit/b73e1275f166214d56c889e49bfdb247838bf940))
+
 # [1.1.0](https://github.com/panyushan-jade/dHooks/compare/v1.0.1...v1.1.0) (2023-08-26)
 
 
