@@ -1,3 +1,15 @@
+# [1.1.0](https://github.com/panyushan-jade/dHooks/compare/v1.0.1...v1.1.0) (2023-08-26)
+
+
+### Bug Fixes
+
+* fix: ts any编译问题 ([8012976](https://github.com/panyushan-jade/dHooks/commit/8012976a7b7e5f049bc1479972b3ff5b81f80b1c))
+
+
+### Features
+
+* 添加useSetSate ([33de9bf](https://github.com/panyushan-jade/dHooks/commit/33de9bf7151da38917cf25f66c7d2ed4c9492984))
+
 ## [1.0.1](https://github.com/panyushan-jade/dHooks/compare/v1.0.0...v1.0.1) (2023-03-02)
 
 
